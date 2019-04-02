@@ -15,5 +15,5 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\ExampleEvent' => [
             'App\Listeners\ExampleListener',
         ],
-    ];
+    ];z
 }

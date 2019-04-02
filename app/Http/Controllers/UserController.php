@@ -11,6 +11,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Users;
 use App\User;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
@@ -41,19 +43,25 @@ class UserController extends Controller
 //		$user->district_name = $user->district->code_name;
 //		dd($user->toArray());
 
-		$user = Users::find(1);
-		$user->phone = $user->phone;
-		dd($user->toArray());
+//		$user = Users::find(1);
+//		$user->phone = $user->phone;
+//		dd($user->toArray());
 //
 //		dd($user->toArray());
 
-//		$user = Users::find(2);
+		$user = Users::find(2);
 //		$user->post = $user->post;
-//		dd($user->toArray());
+//		echo $user->user_name;
+//		dd($user);
 
 //		$user = Users::with(['roles','phone','post'])->get();
 //		dd($user->toArray());
 
+		//$res = DB::table("t_users")->first();
+		//var_dump($res);
+
+		$coll = new \Illuminate\Database\Eloquent\Collection($user);
+		dd($coll);
 
 
 	}
