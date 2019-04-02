@@ -40,5 +40,15 @@ class Users extends Model
 	{
 		return $this->hasOne("App\Models\Phone","user_id","id");
 	}
+	//通过关联模型获取文章
+	public function post()
+	{
+		return $this->hasMany("App\Models\Post","user_id",'id');
+	}
+	//通过关联模型获取到用户的角色 一个用户属于多个角色
+	public function roles()
+	{
+		return $this->belongsToMany("App\Models\Role","user_role","user_id","role_id");
+	}
 
 }

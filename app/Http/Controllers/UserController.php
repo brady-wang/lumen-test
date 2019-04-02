@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Users;
+use App\User;
 use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
@@ -42,8 +43,18 @@ class UserController extends Controller
 
 		$user = Users::find(1);
 		$user->phone = $user->phone;
-
 		dd($user->toArray());
+//
+//		dd($user->toArray());
+
+//		$user = Users::find(2);
+//		$user->post = $user->post;
+//		dd($user->toArray());
+
+//		$user = Users::with(['roles','phone','post'])->get();
+//		dd($user->toArray());
+
+
 
 	}
 

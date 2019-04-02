@@ -19,3 +19,6 @@ $router->get('/', function () use ($router) {
 $router->get('/users', "UserController@index");
 $router->get('/areas', "AreaController@index");
 $router->get('/phones', "PhoneController@index");
+$router->get('/posts', "PostController@index");
+$router->get('/comments', "CommentController@index");
+$router->get('/roles', "RoleController@index");
