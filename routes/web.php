@@ -14,3 +14,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->get('/users', "UserController@index");
+$router->get('/areas', "AreaController@index");
+$router->get('/phones', "PhoneController@index");
